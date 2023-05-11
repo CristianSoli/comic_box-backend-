@@ -11,31 +11,40 @@ if (!$conn) {
     die("La conexión falló: " . mysqli_connect_error());
 }
 
-// Verificar si se envió el formulario
-if (isset($_POST['username']) && isset($_POST['password'])) {
-    // Obtener el nombre de usuario y la contraseña enviados por el formulario
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+// Crear una consulta preparada que invoque al procedimiento almacenado
+$query = "CALL validar_contrasena(?, ?, @valido)";
 
-    // Consulta para verificar si el usuario existe en la base de datos
-    $sql = "SELECT * FROM usuario WHERE nickname = '$username'";
-    $result = mysqli_query($conn, $sql);
+// Preparar la consulta
+$stmt = $conn->prepare($query);
 
-    if (mysqli_num_rows($result) > 0) {
-        // El usuario existe en la base de datos
-        $row = mysqli_fetch_assoc($result);
-        if (password_verify($password, $row['contraseña'])) {
-            // La contraseña es correcta
-            session_start();
-            echo "Contraseña correcta";
-            exit();
-        } else {
-            // La contraseña es incorrecta
-            echo "Contraseña incorrecta.";
-        }
-    } else {
-        // El usuario no existe en la base de datos
-        echo "El usuario no existe.";
-    }
+// Verificar si hay errores de preparación
+if (!$stmt) {
+    echo "Error al preparar la consulta: " . $conn->error;
 }
+
+// Pasar los parámetros necesarios al procedimiento almacenado
+$usuario = $_POST["username"];
+$contrasena = $_POST["password"];
+$stmt->bind_param("ss", $usuario, $contrasena);
+
+// Ejecutar la consulta
+if (!$stmt->execute()) {
+    echo "Error al ejecutar la consulta: " . $stmt->error;
+}
+
+// Obtener el resultado del procedimiento almacenado
+$result = $conn->query("SELECT @valido as valido");
+$row = $result->fetch_assoc();
+$valido = (bool) $row['valido'];
+
+// Mostrar el resultado
+if ($valido) {
+    echo "La contraseña es correcta";
+} else {
+    echo "La contraseña es incorrecta";
+}
+
+// Cerrar la conexión
+$stmt->close();
+$conn->close(); 
 ?>
