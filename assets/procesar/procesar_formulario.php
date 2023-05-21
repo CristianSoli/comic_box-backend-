@@ -1,24 +1,12 @@
 <?php 
 
 // Configuración de la conexión a la base de datos
-$host = "localhost";
-$user = "root";
-$password = "Cristian_solis18";
-$database = "comic_box";
-
-
-// Crear una conexión
-$conexion = new mysqli($host, $user, $password, $database);
-
-// Verificar la conexión
-if ($conexion->connect_error) {
-    die("Conexión fallida: " . $conexion->connect_error);
-}
+include "../../conexion.php";
 
 // Preparación de la llamada al procedimiento almacenado
-$sentencia = mysqli_prepare($conexion, 'CALL insertar_usuario_y_detalles_usuario(?, ?, ?, ?, ?, ?, ?, ?)');
+$sentencia = mysqli_prepare($conn, 'CALL insertar_usuario_y_detalles_usuario(?, ?, ?, ?, ?, ?, ?, ?)');
 if (!$sentencia) {
-    die('Error al preparar la sentencia: ' . mysqli_error($conexion));
+    die('Error al preparar la sentencia: ' . mysqli_error($conn));
 }
 
 // Enlace de los parámetros del procedimiento almacenado
@@ -36,10 +24,11 @@ $telefono = $_POST["telefono_celular"];
 
 // Ejecución del procedimiento almacenado
 if (!mysqli_stmt_execute($sentencia)) {
-    die('Error al ejecutar la sentencia: ' . mysqli_error($conexion));
+    die('Error al ejecutar la sentencia: ' . mysqli_error($conn));
 }
-
-// Cierre de la conexión
-mysqli_close($conexion);
-
+else {
+    mysqli_close($conn);
+    header("Location: ../../PaginasRegistro/login.php");
+    exit();
+}
 ?>

@@ -1,0 +1,214 @@
+:root{
+    --color-primary: #E91105;
+    --color-secundary: #3675C8;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    background-image: url(../img/backgroundComic.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: atma;
+}
+h1{
+    padding-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    color: #fff;
+    font-size: 8rem;
+    text-align: center;
+
+}
+
+/*Botones del menu de navegacion*/
+.btnPlanes{
+    border-radius: 1rem;
+    padding: 0.5rem 4rem;
+    color: #fff;
+    background: linear-gradient(320deg, #3675C8 28%, #E91105 77%);
+    box-shadow: none;
+    align-content: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+.barra--derecha {
+   display: inline-block;
+   box-shadow: none;
+   align-content: center;
+   margin: 0 auto;
+   float: right;
+   margin-top: 35px;
+   margin-right: 2rem;
+}
+
+.btnbarra{
+    border-radius: 1rem;
+    padding: 0.5rem 4rem;
+    color: #fff;
+    background-color: black;
+    box-shadow: none;
+    align-content: center;
+    display: flex;
+    margin: 0 10px;
+    display: inline-block; 
+}
+.btnbarra2{
+    border-radius: 1rem;
+    padding: 0.5rem 4rem;
+    color: #fff;
+    background:  linear-gradient(320deg, #E91105 28%, #3675C8 77%);
+    box-shadow: none;
+    align-content: center;
+    display: flex;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+
+/*Barra de navegacion */
+nav{
+    width: 100%;
+}
+
+.barra{
+    margin: 0;
+    height: 80px;
+    background-color: black;
+    display: inline-block;
+    width: 250px;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.comic_book, .logo{
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.logo{
+    width: 75px;
+    margin-left: 20px;
+}
+
+/*Eventos hover de los botones*/
+.btnbarra:hover{
+    background: linear-gradient(320deg, #E91105 28%, #3675C8 77%)  ;
+    cursor: pointer;
+}
+
+.btnPlanes:hover{
+    background: linear-gradient(320deg, black 28%, black 77%);
+    cursor: pointer;
+}
+
+.btnbarra2:hover{
+    background: linear-gradient(320deg, black 28%, black 77%);
+    cursor: pointer;
+}
+
+.seccion1 {
+    display: flex;
+    background: linear-gradient(90deg, #E91105 50%, #3675C8 50%)  ;
+    color: white; /* Cambiar el color del texto para que sea legible sobre el fondo rojo */
+    padding: 70px; /* Añadir un espacio en blanco alrededor del contenido */
+    overflow: hidden;
+}
+
+.planesbtn{
+    margin: 0 auto;
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 14rem;
+    color:black;
+    background-color: #E91105;
+    font-size: 1.3rem;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.cuadrotxt{
+    background-color: black;
+    margin-right: 4rem;
+    height: 50%;
+    width: 50%;
+    float: left;
+}
+.espaciadoCuadroNegro{
+    margin-bottom: 1rem;
+}
+
+.derecha img {
+    
+    width: 100%;
+    height: 450px;
+    display:flex;
+    float: right;
+    width: 70%;
+}
+
+.diapo-titulo{
+    padding: 2rem;
+    text-align: center;
+}
+
+.seccionesimg {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    text-align: center;
+    
+    
+}
+.seccionesimg img{
+    display: flex;
+    margin-left: 2rem;
+
+    color: var(--text-color-on-primary);
+    width: 300px;
+    border: solid var(--bg-color);
+   
+
+    
+    }
+
+.ancho_pagina{
+    background-color: #fff;
+
+}
+
+
+
+.diapositiva__descripcion{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/*  
+Cosas por hacer:
+logo de comic ver planes
+
+FUENTES A UTILIZAR: Monserrat Semi-Bold
+Monserrat Semi-Extra
+
+Atma Bold: https://fonts.google.com/specimen/Atma
+
+*/
+
+/*  
+https://www.canva.com/design/DAFdSF2Mu2M/ByMfQhmhBP0zHcBJ73wtHA/edit?utm_content=DAFdSF2Mu2M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+*/
+

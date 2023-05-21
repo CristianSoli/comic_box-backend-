@@ -1,15 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/login-styles.css">
     <title>Document</title>
 </head>
 <body>
-<h1>Formulario de Registro</h1>
-    <form action="procesar_formulario.php" method="post">
+<header>
+    <h1>Registro</h1>
+</header>
+<div class="formulario">
+    <section class="seccionRegistro"></section>
+    <form action="../assets/procesar/procesar_formulario.php" method="post">
 
         <label for="nickname">Nickname:</label>
         <input type="text" id="nickname" name="nickname" required><br><br>
@@ -32,8 +37,9 @@
         <label for="telefono_celular">Teléfono celular:</label>
         <input type="tel" id="telefono_celular" name="telefono_celular" required><br><br>
 
-        <input type="submit" value="Registrarse">
-
+        <input id="boton" type="submit" value="Registrarse">
+        
     </form>
+    </div>
 </body>
 </html>

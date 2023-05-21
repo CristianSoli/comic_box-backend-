@@ -1,25 +1,17 @@
 <?php
 // Conexión a la base de datos
-$host = "localhost";
-$user = "root";
-$password = "Cristian_solis18";
-$dbname = "comic_box";
-$conn = mysqli_connect($host, $user, $password, $dbname);
-
-// Verificar la conexión
-if (!$conn) {
-    die("La conexión falló: " . mysqli_connect_error());
-}
+session_start();
+include "../../conexion.php";
 
 // Crear una consulta preparada que invoque al procedimiento almacenado
-$query = "CALL validar_contrasena(?, ?, @valido)";
+$query = "CALL validar_contrasena(?, ?, @valido, @tipo)";
 
 // Preparar la consulta
 $stmt = $conn->prepare($query);
 
 // Verificar si hay errores de preparación
 if (!$stmt) {
-    echo "Error al preparar la consulta: " . $conn->error;
+    echo "Error al preparar la consulta: ";
 }
 
 // Pasar los parámetros necesarios al procedimiento almacenado
@@ -33,13 +25,26 @@ if (!$stmt->execute()) {
 }
 
 // Obtener el resultado del procedimiento almacenado
-$result = $conn->query("SELECT @valido as valido");
+$result = $conn->query("SELECT @valido as valido, @tipo as tipo");
 $row = $result->fetch_assoc();
 $valido = (bool) $row['valido'];
+$tipo = (int) $row['tipo'];
 
 // Mostrar el resultado
 if ($valido) {
-    echo "La contraseña es correcta";
+    $_SESSION["usuario"] = $usuario;
+    $_SESSION["tipo"] = $tipo;
+    setcookie("usuario", $usuario, time() + (7 * 24 * 60 * 60), "/");
+    setcookie("tipo", $tipo, time() + (7 * 24 * 60 * 60), "/");
+
+    if($tipo == 0){
+        header("Location: ../../paginasUsuario/paginaPrincipalUsuario.php");
+        exit();  
+    }
+    elseif($tipo == 1){
+        header("Location: ../../paginasAdmon/paginaPrincipalAdmon.php");
+        exit();
+    }
 } else {
     echo "La contraseña es incorrecta";
 }

@@ -1,0 +1,37 @@
+.mostrarDatos {
+  width: 50%;
+  border-collapse: collapse;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
+
+.mostrarDatos th,
+.mostrarDatos td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.mostrarDatos th {
+  background-color: #555;
+  color: #fff;
+}
+
+.mostrarDatos tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.mostrarDatos tr:hover {
+  background-color: #ddd;
+}
+
+.mostrarDatos td:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.mostrarDatos td:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+

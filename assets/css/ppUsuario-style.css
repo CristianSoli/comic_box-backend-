@@ -1,0 +1,65 @@
+nav{
+    width: 100%;
+    background-color: #000;
+    padding: 1rem;
+    margin-top: 5px;
+    border:  1px solid #fff;
+    border-radius: 1rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  nav ul li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  nav ul li:hover > a {
+    background-color: red;
+    border-radius: .5rem;
+  }
+  
+  nav ul li:hover .submenu {
+    display: block;
+  
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+  }
+  
+  .submenu li {
+    display: block;
+  }
+  
+  #search-form {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  #search-input {
+    padding: 5px;
+    
+  }
+  
+  #search-form button {
+    padding: 5px 10px;
+  }
+  
+  .derecha{
+    float: right;
+  }

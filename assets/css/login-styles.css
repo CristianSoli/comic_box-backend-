@@ -1,0 +1,240 @@
+.netflix-section {
+    padding: 20px;
+  }
+  .titulo{
+    text-align: center;
+    font-size: 5rem;
+    font-family: Bangers;
+    border-radius: 2rem;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    background-color: #f00;
+    padding: 15px;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    text-align: center;
+    letter-spacing: 5px;
+    margin-left:250px;
+    margin-right: 250px;
+}  
+
+
+h2{
+    color: azure;
+}
+
+  .netflix-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .netflix-item {
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px #000;
+    background-color: #e65353;
+    padding: 15px;
+    border: 4px solid #fff;
+  }
+
+  .netflix-item img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .netflix-item:hover img {
+    transform: scale(1.2);
+  }
+
+  .netflix-item h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: 0;
+    background-color: rgba(0, 228, 245, 0.8);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    font-family: Bangers;
+    letter-spacing: 1px;
+  }
+
+  .netflix-item p {
+
+
+
+
+     position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: 0;
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    font-family: Bangers;
+    letter-spacing: 1px;
+  }
+
+
+ .login label{
+  text-align: center;
+    font-family: atma;
+    padding: 2rem;
+    font-size: 2rem;
+ }
+ .login h1{
+    text-align: center;
+
+ }
+.login input{
+    
+    font-family: atma;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    padding: .7rem;
+}
+
+
+
+
+body{
+  
+  font-family: atma;
+  background-image: url(../img/fondoRegistro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+
+
+h1{
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 4rem;
+  letter-spacing: .3rem;
+  background:  linear-gradient(320deg, rgb(102, 255, 0) 28%, rgb(0, 174, 255) 77% );
+  border: 4px solid black;
+  border-radius: 4rem;
+  color: rgb(0, 0, 0,);
+  margin-left: 40%;
+  margin-right: 40%;
+
+}
+
+.formulario{
+  padding: 1rem;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 4rem;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid black; 
+  background-color: rgb(255, 247, 136);
+  border-radius: 6rem;   
+   
+} 
+
+.formulario label{
+  display: inline-flex;
+ font-size: 2rem;
+ margin-top: 2rem;
+}
+
+.formulario input{
+  display: flex;
+  float: right;
+  margin-top: 2rem;
+  padding: 1rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+
+}  
+
+.label{
+  display: flex;
+}
+.input{
+  display: inline-block;
+  float: right;
+}
+  
+#boton{
+  display: flex;
+  border-radius: 1rem;
+}
+
+
+.login{
+
+  font-family: atma;
+  display: flex;
+  box-shadow: rgba(37, 37, 36, 0.5);
+  margin-top: 5rem;
+  justify-content: center;
+  align-items: center;
+    
+}
+
+
+.login button{
+      display: flex;
+      font-family: atma;
+      padding: 1.3rem;
+      background-color: red;
+      border-color: white;
+      align-items: center;
+      border-radius: 2rem;
+      align-items: center;
+      color: #fff;
+      margin-left : 50px;
+      justify-content: center;
+      
+      
+}
+.login label{
+  display: inline-block;
+  font-family: atma;
+  padding: 2rem;
+  font-size: 2rem;
+}
+.login h1{
+  text-align: center;
+  width: 300px;
+  height: 150px;
+
+}
+.login input{
+  
+  font-family: atma;
+  margin-left: 15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: .7rem;
+}
+
+.cosas{
+  display: flex;
+  background-color: rgb(255, 247, 136);
+  display: inline-block;
+   border-radius: 0.7rem;
+    
+}
+
