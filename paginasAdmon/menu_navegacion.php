@@ -1,5 +1,5 @@
 <nav>
   <ul>
-    <li><a href="crear.php">Nuevo comic</a></li>
+    <li><a href="paginaPrincipalAdmon.php">Nuevo comic</a></li>
   </ul>
 </nav>

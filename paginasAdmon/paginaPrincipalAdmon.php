@@ -10,7 +10,12 @@
 </head>
 
 <body>
-    <?php include("./menu_navegacion.php"); ?>
+<nav>
+  <ul>
+    <li><a href="Seleccionar.php">Regresar</a></li>
+  </ul>
+</nav>
+
 
     <h1>administrador</h1>
     <form action="prueba.php" method="POST">

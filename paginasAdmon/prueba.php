@@ -19,8 +19,11 @@ $sql = "CALL insertar_comic_detalles_comic('$link',$autor, $clasificacion, $edit
 $result = $conn->query($sql);
 
 if ($result === TRUE) {
-    
-    echo "¡El comic y sus detalles se han insertado correctamente!";
+    echo '<script>alert("¡Esto es una alerta!");</script>';
+    header("Location: ./seleccionar.php");
+    exit();
+
+
 
 } else {
     echo "Error al insertar el comic: " . $conn->error;

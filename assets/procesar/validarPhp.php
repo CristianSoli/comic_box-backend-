@@ -42,7 +42,7 @@ if ($valido) {
         exit();  
     }
     elseif($tipo == 1){
-        header("Location: ../../paginasAdmon/paginaPrincipalAdmon.php");
+        header("Location: ../../paginasAdmon/Seleccionar.php");
         exit();
     }
 } else {
